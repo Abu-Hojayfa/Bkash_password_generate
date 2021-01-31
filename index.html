@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BKash Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="mainThing" class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="generatePin" class="form-control" type="text">
+                    <button onclick='generating()' class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="inputPin" class="form-control" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                                <div onclick="inputNumber('7')" class="button">7</div>
+                                <div class="button" onclick="inputNumber('8')">8</div>
+                                <div class="button" onclick="inputNumber('9')">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button" onclick="inputNumber('4')">4</div>
+                                <div class="button" onclick="inputNumber('5')">5</div>
+                                <div class="button" onclick="inputNumber('6')">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button" onclick="inputNumber('1')">1</div>
+                                <div class="button" onclick="inputNumber('2')">2</div>
+                                <div class="button" onclick="inputNumber('3')">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div onclick="inputNumber('')" class="button">
+                                    <= </div> <div class="button" onclick="inputNumber('0')">0
+                                </div>
+                                <div onclick="inputNumber('clear')" class="button">C</div>
+                            </div>
+                            <div>
+                                <button onclick="comparing()" type="submit" class="submit-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="notify-section">
+            <div id="notiN" class="notify notiN">
+                <p id="negative">❌ Pin Didn't Match, Please try again <br>
+                    Your Bkash Pin is:
+                </p>
+                <button onclick="location.reload()" id="buttnN">OKAY 😔😔</button>
+            </div>
+            <div id="notiP" class="notify notiP">
+                <p id="positive">✅ Pin Matched... Secret door is opening for you</p>
+                <button onclick="location.reload()" id="buttnN">Good JOB🥰🥰 </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
